@@ -3,7 +3,7 @@ import App from './App'
 import router from './router'
 import store from './store/'
 import ElementUI from 'element-ui'
-// import './icons' //svg
+import './icons' //svg
 import 'element-ui/lib/theme-default/index.css'
 import * as echarts from 'echarts/core'
 import { TooltipComponent, GridComponent, LegendComponent } from 'echarts/components'
