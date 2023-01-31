@@ -2,7 +2,7 @@
   <div class="fillcontain">
     <head-top></head-top>
     111
-    <svg-icon icon-class="404" class-name="custom-class" />
+    <svg-icon icon-class="password" class-name="password" />
   </div>
 </template>
 

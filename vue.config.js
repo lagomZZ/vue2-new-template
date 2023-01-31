@@ -16,23 +16,18 @@ module.exports = {
       },
     },
   },
-  chainWebpack: (config) => {
-    config.module.rules.delete('svg')
-    config.resolve.symlinks(true)
-    config.resolve.alias
-      .set('@', resolve('src'))
-      .set('~@', resolve('src/assets'))
-      .set('@c', resolve('src/components'))
-      .set('static', resolve('src/static'))
+  chainWebpack(config) {
+    config.module.rule('svg').exclude.add(resolve('src/icons')).end()
     config.module
-      .rule('svg-sprite-loader')
+      .rule('icons')
       .test(/\.svg$/)
-      .include.add(resolve('src/icons')) // 处理svg目录
+      .include.add(resolve('src/icons'))
       .end()
       .use('svg-sprite-loader')
       .loader('svg-sprite-loader')
       .options({
         symbolId: 'icon-[name]',
       })
+      .end()
   },
 }
