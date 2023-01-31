@@ -1,6 +1,6 @@
 const path = require('path')
 function resolve(dir) {
-  path.join(__dirname, dir)
+  return path.join(__dirname, dir)
 }
 module.exports = {
   publicPath: './',
