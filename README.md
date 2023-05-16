@@ -1,4 +1,5 @@
 # vue2-template
+基于vue2的业务框架
 
 ## Project setup
 ```
@@ -7,18 +8,7 @@ yarn install
 
 ### Compiles and hot-reloads for development
 ```
-yarn serve
+yarn dev
 ```
+目前封装了svg组件，echart组件
 
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
