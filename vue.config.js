@@ -8,6 +8,7 @@ module.exports = {
   devServer: {
     port: 8002,
     proxy: 'http://elm.cangdu.org',
+    open: true,
   },
   configureWebpack: {
     resolve: {
