@@ -2,9 +2,8 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import store from './store/'
-import ElementUI from 'element-ui'
+// import ElementUI from 'element-ui'
 import './icons' //svg
-import 'element-ui/lib/theme-default/index.css'
 import * as echarts from 'echarts/core'
 import { TooltipComponent, GridComponent, LegendComponent } from 'echarts/components'
 
@@ -15,25 +14,25 @@ import { TitleComponent } from 'echarts/components'
 import { LabelLayout } from 'echarts/features'
 
 echarts.use([
-    TooltipComponent,
-    GridComponent,
-    LegendComponent,
-    BarChart,
-    CanvasRenderer,
-    TitleComponent,
-    RadarChart,
-    PieChart,
-    LabelLayout,
-    LineChart,
+  TooltipComponent,
+  GridComponent,
+  LegendComponent,
+  BarChart,
+  CanvasRenderer,
+  TitleComponent,
+  RadarChart,
+  PieChart,
+  LabelLayout,
+  LineChart,
 ])
 
 Vue.prototype.$echarts = echarts
 Vue.config.productionTip = false
 
-Vue.use(ElementUI)
+// Vue.use(ElementUI)
 
 new Vue({
-    router,
-    store,
-    render:h=>h(App)
+  router,
+  store,
+  render: (h) => h(App),
 }).$mount('#app')
