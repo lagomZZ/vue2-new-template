@@ -8,7 +8,7 @@ yarn install
 
 ### Compiles and hot-reloads for development
 ```
-yarn dev
+yarn serve
 ```
 目前封装了svg组件，echart组件
 
