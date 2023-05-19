@@ -13,6 +13,23 @@ import { TitleComponent } from 'echarts/components'
 
 import { LabelLayout } from 'echarts/features'
 
+import myPlugins from './packages/index'
+
+//fortawesome
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+import { faShirt } from '@fortawesome/free-solid-svg-icons'
+library.add(faShirt)
+
+//自动注册全局组件
+import componentsList from '@/utils/componentsRegister'
+Vue.use(componentsList)
+
+/* add font awesome icon component */
+Vue.component('font-awesome-icon', FontAwesomeIcon)
+
+Vue.use(myPlugins)
 echarts.use([
   TooltipComponent,
   GridComponent,

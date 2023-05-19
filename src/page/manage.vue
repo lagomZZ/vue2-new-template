@@ -2,8 +2,9 @@
   <div class="manage_page fillcontain">
     <el-row style="height: 100%">
       <el-col :span="4" style="min-height: 100%; background-color: #324057">
-        <el-menu :default-active="defaultActive" style="min-height: 100%" router text-color="#f5f5f5">
+        <el-menu :default-active="defaultActive" style="min-height: 100%" router text-color="#f5f5f5" background-color="#324057">
           <el-menu-item index="manage"><i class="el-icon-menu"></i>首页</el-menu-item>
+          <el-menu-item index="monitor"><i class="el-icon-menu"></i>大屏</el-menu-item>
 
           <el-submenu index="3">
             <template slot="title"><i class="el-icon-plus"></i>添加数据</template>

@@ -1,5 +1,7 @@
 <template>
-  <div>11111111111</div>
+  <div>
+    <theme-switch :colorArr="[]"></theme-switch>
+  </div>
 </template>
 
 <script>
