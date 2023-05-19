@@ -1,11 +1,15 @@
 <template>
   <div>
-    <theme-switch :colorArr="[]"></theme-switch>
+    <theme-switch :labelArr="['theme-light', 'theme-dark']"></theme-switch>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {}
+  },
+}
 </script>
 
 <style></style>
