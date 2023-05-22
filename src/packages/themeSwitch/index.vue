@@ -66,4 +66,10 @@ export default {
   width: 20px;
   height: 20px;
 }
+.jc-center {
+  justify-content: center;
+}
+.d-flex {
+  display: flex;
+}
 </style>
