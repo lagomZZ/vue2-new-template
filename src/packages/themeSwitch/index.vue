@@ -14,6 +14,7 @@
 </template>
 <script>
 import store from '@/store'
+import { toggleClass } from '@/utils/index.js'
 export default {
   name: 'themeSwitch',
   data() {
@@ -24,6 +25,7 @@ export default {
   watch: {
     theme(newVal, oldVal) {
       store.commit('SET_CURRENT_THEME', this.theme)
+      toggleClass(document.body, this.theme)
     },
   },
 

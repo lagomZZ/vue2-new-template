@@ -1,7 +1,9 @@
 <template>
   <div>
-    <theme-switch :labelArr="['theme-light', 'theme-dark']"></theme-switch>
+    <theme-switch :labelArr="['theme-light', 'theme-dark', 'custom-theme']"></theme-switch>
     <visitor-pie :pieData="pieData"></visitor-pie>
+    <el-date-picker v-model="start" type="date" placeholder="date"></el-date-picker>
+    <el-button type="primary"></el-button>
   </div>
 </template>
 
@@ -12,6 +14,7 @@ export default {
   data() {
     return {
       pieData: {},
+      start: null,
     }
   },
   components: {
@@ -37,4 +40,8 @@ export default {
 }
 </script>
 
-<style></style>
+<style scoped>
+/* .number {
+  color: aqua;
+} */
+</style>

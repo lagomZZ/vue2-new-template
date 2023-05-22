@@ -6,6 +6,11 @@
 
 <script>
 import store from './store'
+//引入element自定义主题
+import '@/style/element/theme-light/index.css'
+import '@/style/element/theme-dark/index.css'
+import '@/style/element/custom-theme/index.css'
+
 export default {
   computed: {
     theme() {
