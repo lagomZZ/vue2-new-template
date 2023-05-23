@@ -1,6 +1,6 @@
 <template>
   <div>
-    <theme-switch :labelArr="['theme-light', 'theme-dark', 'custom-theme']"></theme-switch>
+    <theme-switch :labelArr="['theme-light', 'theme-dark']"></theme-switch>
     <visitor-pie :pieData="pieData"></visitor-pie>
     <el-date-picker v-model="start" type="date" placeholder="date"></el-date-picker>
     <el-button type="primary"></el-button>
