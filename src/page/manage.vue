@@ -15,6 +15,7 @@
             <template slot="title"><i class="el-icon-star-on"></i>公共组件</template>
             <el-menu-item index="visitor">echart组件</el-menu-item>
             <el-menu-item index="svgExample">svg组件</el-menu-item>
+            <el-menu-item index="basicTable">表格基础组件</el-menu-item>
           </el-submenu>
           <el-submenu index="5">
             <template slot="title"><i class="el-icon-edit"></i>编辑</template>

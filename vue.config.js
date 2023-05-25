@@ -19,7 +19,17 @@ module.exports = {
   outputDir: 'dist',
   devServer: {
     port: 8002,
-    proxy: 'http://elm.cangdu.org',
+    // proxy: 'http://elm.cangdu.org',
+    // proxy: 'http://localhost:3000',
+
+    proxy: {
+      '/api': {
+        target: 'http://localhost:3000',
+        changeOrigin: true,
+        pathRewrite: { '^/api': '' },
+      },
+    },
+
     open: true,
   },
   configureWebpack: {

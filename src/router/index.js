@@ -16,6 +16,7 @@ const svgExample = (r) => require.ensure([], () => r(require('@/page/svgExample'
 const uploadImg = (r) => require.ensure([], () => r(require('@/page/uploadImg')), 'uploadImg')
 const vueEdit = (r) => require.ensure([], () => r(require('@/page/vueEdit')), 'vueEdit')
 const monitor = (r) => require.ensure([], () => r(require('@/page/monitor')), 'monitor')
+const basicTable = (r) => require.ensure([], () => r(require('@/page/basicTable')), 'basicTable')
 
 const routes = [
   {
@@ -53,6 +54,11 @@ const routes = [
         path: '/svgExample',
         component: svgExample,
         meta: ['图表', 'svgExample'],
+      },
+      {
+        path: '/basicTable',
+        component: basicTable,
+        meta: ['图表', 'basicTable'],
       },
 
       {
