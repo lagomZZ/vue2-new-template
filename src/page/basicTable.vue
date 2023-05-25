@@ -46,7 +46,9 @@ export default {
       outButtons: [
         {
           label: '查询',
-          click: function () {},
+          click: function () {
+            console.log('11')
+          },
         },
       ],
       bodyButtons: [

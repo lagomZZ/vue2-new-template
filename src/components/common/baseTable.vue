@@ -1,5 +1,7 @@
 <template>
   <div>
+    <el-button type="primary" v-for="btn in tableConfig.outButtons" @click="getBtnFunction(btn.click)">{{ btn.label }}</el-button>
+
     <el-table :data="tableData.data" style="width: 100%">
       <el-table-column :prop="col.key" :label="col.label" v-for="col in columns" :key="col.key"> </el-table-column>
       <el-table-column header-align="center" align="center" label="操作" v-show="tableConfig.bodyButtons && tableConfig.bodyButtons.length">
@@ -58,8 +60,11 @@ export default {
       this.tableConfig.params[1].start = val
     },
     getBtnFunction(fn, row) {
-      console.log(fn)
-      fn(row)
+      if (row) {
+        fn(row)
+      } else {
+        fn()
+      }
     },
   },
 }
