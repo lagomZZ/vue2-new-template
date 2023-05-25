@@ -23,13 +23,21 @@ export default {
   },
   mounted() {
     this.tableConfig = {
-      url: 'api/ISV01/getDomain',
+      //   url: 'app/ISV01/getDomain',
+      url: 'api/rest/post/testingSpecialtyService/findbySpecialty',
       //   url: 'shopping/v2/menu?restaurant_id=1',
-      params: {
-        deviceCode: '310211E01',
-        limit: 10,
-        offset: 0,
-      },
+      params: [
+        {
+          code: '',
+          name: '',
+          desc: '',
+        },
+        {
+          start: 0,
+          length: 10,
+          statCount: true,
+        },
+      ],
       showIndex: false,
       sortBy: {
         value: 'createTime',
@@ -49,8 +57,26 @@ export default {
       ],
       columns: [
         {
-          key: 'id',
-          label: '规则编号',
+          key: 'code',
+          label: '检测专业编码',
+          type: 'text',
+          bind: function (row) {},
+        },
+        {
+          key: 'name',
+          label: '检测专业名称',
+          type: 'text',
+          bind: function (row) {},
+        },
+        {
+          key: 'parentName',
+          label: '父级名称',
+          type: 'text',
+          bind: function (row) {},
+        },
+        {
+          key: 'parentId',
+          label: '父级编码',
           type: 'text',
           bind: function (row) {},
         },

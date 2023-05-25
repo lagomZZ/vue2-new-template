@@ -23,10 +23,14 @@ module.exports = {
     // proxy: 'http://localhost:3000',
 
     proxy: {
-      '/api': {
+      '/app': {
         target: 'http://localhost:3000',
         changeOrigin: true,
-        pathRewrite: { '^/api': '' },
+        pathRewrite: { '^/app': '' },
+      },
+      '/api/rest/post': {
+        target: 'http://10.26.105.167:80',
+        changeOrigin: true,
       },
     },
 

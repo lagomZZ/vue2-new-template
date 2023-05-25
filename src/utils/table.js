@@ -5,12 +5,14 @@ class myTable {
   }
   init(opts, data) {
     this.url = opts.url
+    this.params = opts.params
+    this.columns = opts.columns
     this.tableData = data || []
 
     // this.requestData()
   }
   async requestData() {
-    const data = await request(this.url)
+    const data = await request(this.url, this.params)
 
     this.tableData = data
   }

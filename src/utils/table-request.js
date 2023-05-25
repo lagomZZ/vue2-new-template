@@ -6,12 +6,12 @@ const generateUrl = (url) => {
   return `${baseUrl}/${u}`
 }
 
-function request(url) {
+function request(url, params) {
   return new Promise((resolve, reject) => {
     axios
-      .post(generateUrl(url))
+      .post(generateUrl(url), params)
       .then((res) => {
-        resolve(res.data.result.data)
+        resolve(res.data.data)
       })
       .catch((e) => {
         reject(e)
