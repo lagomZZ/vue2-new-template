@@ -2,6 +2,11 @@
   <div>
     <el-table :data="tableData.data" style="width: 100%">
       <el-table-column :prop="col.key" :label="col.label" v-for="col in columns" :key="col.key"> </el-table-column>
+      <el-table-column header-align="center" align="center" label="操作" v-show="tableConfig.bodyButtons && tableConfig.bodyButtons.length">
+        <template slot-scope="scope">
+          <el-button type="primary" v-for="btn in tableConfig.bodyButtons" @click="getBtnFunction(btn.click, scope.row)">{{ btn.label }}</el-button>
+        </template>
+      </el-table-column>
     </el-table>
     <el-pagination
       layout="total, sizes, prev, pager, next, jumper"
@@ -51,6 +56,10 @@ export default {
     },
     handleCurrentChange(val) {
       this.tableConfig.params[1].start = val
+    },
+    getBtnFunction(fn, row) {
+      console.log(fn)
+      fn(row)
     },
   },
 }

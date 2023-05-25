@@ -46,13 +46,16 @@ export default {
       outButtons: [
         {
           label: '查询',
-          on: { click: function () {} },
+          click: function () {},
         },
       ],
       bodyButtons: [
         {
-          label: '添加',
-          on: { click: function () {} },
+          label: '删除',
+          click: function (row) {
+            alert(`可以获取该行信息 ${row.id}`)
+            console.log(row)
+          },
         },
       ],
       columns: [
