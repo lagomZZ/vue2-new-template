@@ -1,7 +1,8 @@
 <template>
   <div>
-    <el-button type="primary" v-for="btn in tableConfig.outButtons" @click="getBtnFunction(btn.click)">{{ btn.label }}</el-button>
-
+    <div style="margin: 20px">
+      <el-button type="primary" v-for="btn in tableConfig.outButtons" @click="getBtnFunction(btn.click)">{{ btn.label }}</el-button>
+    </div>
     <el-table :data="tableData.data" style="width: 100%">
       <el-table-column :prop="col.key" :label="col.label" v-for="col in columns" :key="col.key"> </el-table-column>
       <el-table-column header-align="center" align="center" label="操作" v-show="tableConfig.bodyButtons && tableConfig.bodyButtons.length">
@@ -35,6 +36,8 @@ export default {
   watch: {
     tableConfig: {
       handler: async function (newVal, oldVal) {
+        console.log(this.tableConfig)
+        console.log(newVal, oldVal)
         if (oldVal) {
           let instance = new myTable(newVal, oldVal.data)
           await instance.requestData()
