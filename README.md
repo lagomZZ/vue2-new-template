@@ -16,7 +16,7 @@ yarn serve
 
 目前封装了 svg 组件，echart 组件
 
-加入了整体主题切换功能（包括 echart,element 和普通样式定义变量）
+基于 fetch 的请求封装
 
 基于 fetch 的请求封装
 
