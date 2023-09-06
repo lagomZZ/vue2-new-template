@@ -19,20 +19,19 @@ module.exports = {
   outputDir: 'dist',
   devServer: {
     port: 8002,
-    // proxy: 'http://elm.cangdu.org',
-    // proxy: 'http://localhost:3000',
+    proxy: 'http://elm.cangdu.org',
 
-    proxy: {
-      '/app': {
-        target: 'http://localhost:3000',
-        changeOrigin: true,
-        pathRewrite: { '^/app': '' },
-      },
-      '/api/rest/post': {
-        target: 'http://10.26.105.167:80',
-        changeOrigin: true,
-      },
-    },
+    // proxy: {
+    //   '/app': {
+    //     target: 'http://localhost:3000',
+    //     changeOrigin: true,
+    //     pathRewrite: { '^/app': '' },
+    //   },
+    //   '/api/rest/post': {
+    //     target: 'http://10.26.105.167:80',
+    //     changeOrigin: true,
+    //   },
+    // },
 
     open: true,
   },

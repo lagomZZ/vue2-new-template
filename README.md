@@ -1,20 +1,23 @@
 # vue2-template
-基于vue2的业务框架
+
+基于 vue2 的业务框架
 
 ## Project setup
+
 ```
 yarn install
 ```
 
 ### Compiles and hot-reloads for development
+
 ```
 yarn serve
 ```
-目前封装了svg组件，echart组件
 
-加入了整体主题切换功能（包括echart,element和普通样式定义变量）
+目前封装了 svg 组件，echart 组件
 
-基于fetch的请求封装
+加入了整体主题切换功能（包括 echart,element 和普通样式定义变量）
 
+基于 fetch 的请求封装
 
-
+可拖拽可配置视图

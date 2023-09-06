@@ -16,6 +16,7 @@ const svgExample = (r) => require.ensure([], () => r(require('@/page/svgExample'
 const uploadImg = (r) => require.ensure([], () => r(require('@/page/uploadImg')), 'uploadImg')
 const vueEdit = (r) => require.ensure([], () => r(require('@/page/vueEdit')), 'vueEdit')
 const monitor = (r) => require.ensure([], () => r(require('@/page/monitor')), 'monitor')
+const draggable = (r) => require.ensure([], () => r(require('@/page/draggable')), 'draggable')
 const basicTable = (r) => require.ensure([], () => r(require('@/page/basicTable')), 'basicTable')
 
 const routes = [
@@ -74,6 +75,7 @@ const routes = [
     ],
   },
   { path: '/monitor', component: monitor },
+  { path: '/draggable', component: draggable },
 ]
 
 export default new Router({
