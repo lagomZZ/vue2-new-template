@@ -18,6 +18,7 @@ const vueEdit = (r) => require.ensure([], () => r(require('@/page/vueEdit')), 'v
 const monitor = (r) => require.ensure([], () => r(require('@/page/monitor')), 'monitor')
 const draggable = (r) => require.ensure([], () => r(require('@/page/draggable')), 'draggable')
 const basicTable = (r) => require.ensure([], () => r(require('@/page/basicTable')), 'basicTable')
+const editableTable = (r) => require.ensure([], () => r(require('@/page/editableTable')), 'editableTable')
 
 const routes = [
   {
@@ -60,6 +61,11 @@ const routes = [
         path: '/basicTable',
         component: basicTable,
         meta: ['图表', 'basicTable'],
+      },
+      {
+        path: '/editableTable',
+        component: editableTable,
+        meta: ['图表', 'editableTable'],
       },
 
       {
